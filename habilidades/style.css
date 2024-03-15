@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-bars{
+    width: 90%;
+    margin: auto;
+}
+
+.skills{
+    width: 500px;
+    height: auto;
+    margin: 2rem auto;
+    background-color: rgb(32, 29, 29);
+    height: 290px;
+    border-radius: 100px 30px;
+    transition: all 0.3s ease-out;
+    box-shadow: 10px 10px 10px 3px slategrey;
+    cursor: pointer;
+    color: white;
+}
+.skills:hover{
+    background-color: rgb(226, 226, 226);
+    box-shadow: 10px 10px 10px 3px slategray;
+    color: black;
+}
+
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 12px;
+    padding: 30px;
+}
+
+.bar-space{
+    margin: auto;;
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+}
+.bar-space img{
+    width: 30px;
+    height: 30px;
+}
+.bar-space p {
+    padding: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+/*Estilos para la barra de progreso*/
+.bar {
+    width: 100%;
+    margin: 10px 30px;
+    height: 10px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 20px;
+    overflow: hidden; /* Asegura que el contenido se ajuste dentro de la barra */
+}
+
+.progress {
+    width: 0;
+    margin: 0;
+    height: 100%;
+    border-radius: 20px;
+    transition: width 1s ease-in-out; /* Agrega una animación a la barra de progreso */
+    background-color: royalblue; /* Color de fondo para la barra de progreso */
+}

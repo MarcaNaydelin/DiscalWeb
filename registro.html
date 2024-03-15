@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap">
+</head>
+<body>
+    <header>
+        <div class="menu container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="logo" style="width: 80px; height: 80px;">
+            </a>
+            
+            <nav class = "navbar">
+                <ul>
+                    <li><a href="inicio">Inicio</a></li>
+                    <li><a href="ayuda">Te ayudamos</a></li>
+                    <li><a href="#">Juegos</a></li>
+                    <li><a href="contactos">contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-form register">
+        <div class = "information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>Para unirte a la comunidad de DiscalWeb porfavor Inicia sesion</p>
+                <input type="button" value="Iniciar Sesion" id="sign-in">
+            </div>
+        </div>
+        <div class = "form-information">
+            <div class ="form-information-childs">
+                <h2>Crear una cuenta</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook-circle' ></i>
+                    <i class='bx bxl-gmail' ></i>
+                </div>
+                <form class = "form">
+                    <label >
+                        <i class='bx bx-user-circle'></i>
+                        <input type="text" placeholder="Nombre Completo del padre">
+                    </label>
+                    <label >
+                        <i class='bx bx-envelope' ></i>
+                        <input type="email" placeholder="Correo Electronico del padre">
+                    </label>
+                    <label >
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña">
+                    </label>
+                    <input type="submit" value="Registrarse">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-form login hide">
+        <div class = "information">
+            <div class="info-childs">
+                <h2>¡¡Bienvenido nuevamente!!</h2>
+                <p>Si aun no tienes una cuenta porfavor registrarse aqui</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class = "form-information">
+            <div class ="form-information-childs">
+                <h2>Iniciar sesion</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook-circle' ></i>
+                    <i class='bx bxl-gmail' ></i>
+                </div>
+                <form class = "form">
+                    <label >
+                        <i class='bx bx-envelope' ></i>
+                        <input type="email" placeholder="Correo Electronico del padre">
+                    </label>
+                    <label >
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña">
+                    </label>
+                    <input type="submit" value="Iniciar Sesion" id="btnIniciarSesion">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

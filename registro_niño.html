@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro del niño</title>
+    <link rel="stylesheet" href="style3.css"> 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap">
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html" class="logo">
+            <img src="./img/logo.png" alt="logo">
+        </a>
+    </div>
+    <div class="container">
+        <header>Registro de usuario</header>
+        <div class="progress-bar">
+            <div class="paso">
+                <p>Datos</p>
+                <div class="num">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="paso">
+                <p>Nac.</p>
+                <div class="num">
+                    <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="paso">
+                <p>Perfil</p>
+                <div class="num">
+                    <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="paso">
+                <p>Informes</p>
+                <div class="num">
+                    <span>4</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+        </div>
+
+        <div class="form-princ">
+            <form action="#">
+                <!--Pagina 1-->
+                <div class="pagina movPag" >
+                    <div class="titulo">Informacion sobre el niño</div>
+                    <div class="campo">
+                        <div class="label">Nombres: <b class="error" id="nombres-error"></b></div>
+                        <input type="text" id="nombres" placeholder="Nombres del niño">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Apellido paterno: <b class="error" id="apellido1-error"></b></div>
+                        <input type="text" id="apellido1" placeholder="Apellido paterno">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Apellido materno: <b class="error" id="apellido2-error"></b></div>
+                        <input type="text" id="apellido2" placeholder="Apellido materno">
+                    </div>
+                    <div class="campo sigPag">
+                        <button>Siguiente</button>
+                    </div>
+                </div>
+                <!--Pagina 2-->
+                <div class="pagina">
+                    <div class="titulo">Informacion secundaria</div>
+                    <div class="campo">
+                        <div class="label">Fecha de nacimiento: <b class="error" id="fechaNac-error"></b></div>
+                        <input type="date" id="fechaNac" placeholder="Fecha de nacimiento del niño">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Genero: <b class="error" id="genero-error"></b></div>
+                        <select id="genero">
+                            <option value="-1" disabled selected>Elija una opción.</option>
+                            <option value="0">Masculino</option>
+                            <option value="1">Femenino</option>
+                        </select>
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag1 volver">Atrás</button>
+                        <button class="adelante-pag3 adelante">Siguiente</button>
+                    </div>
+                </div>
+                <!--Pagina 3-->
+                <div class="pagina">
+                    <div class="titulo">Perfil de usuario del niño</div>
+                    <div class="campo">
+                        <div class="label">Nombre de usuario: <b class="error" id="usuario-error"></b></div>
+                        <input type="text" id="usuario" placeholder="Nombre de usuario">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Contraseña: <b class="error" id="contra-error"></b></div>
+                        <input type="password" id="contra" placeholder="Contraseña">
+                        <span class="ojitos" onclick="mostrarContra()">
+                            <i id="mostrar" class="fa fa-eye" title="Mostrar contraseña"></i>
+                            <i id="ocultar" class="fa fa-eye-slash" title="Ocultar contraseña"></i>
+                        </span>
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag2 volver">Atrás</button>
+                        <button class="adelante-pag4 adelante">Siguiente</button>
+                    </div>
+                    
+                </div>
+                <!--Pagina 4-->
+                <div class="pagina">
+                    <div class="titulo">Informacion para envio de informes</div>
+                    <div class="campo">
+                        <div class="label">Nombre: <b class="error" id="nombre-error"></b></div>
+                        <input type="text" id="nombre" placeholder="Nombre del padre o tutor">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Correo electronico: <b class="error" id="correo-error"></b></div>
+                        <input type="text" id="correo" placeholder="Correo electronico del padre">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Contraseña: <b class="error" id="contraPadre-error"></b></div>
+                        <input type="password" id="contraPadre" placeholder="Contraseña">
+                        <span class="ojitos" onclick="mostrarContra()">
+                            <i id="mostrar" class="fa fa-eye" title="Mostrar contraseña"></i>
+                            <i id="ocultar" class="fa fa-eye-slash" title="Ocultar contraseña"></i>
+                        </span>
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag3 volver">Atrás</button>
+                        <button class="Fin" id="btnfinalizar">Finalizar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function mostrarContra(){
+            var x =  document.getElementById("contra");
+            var y =  document.getElementById("ocultar");
+            var z =  document.getElementById("mostrar");
+            if (x.type == 'password'){
+                x.type = "text",
+                y.style.display="block";
+                z.style.display="none";
+            }else{
+                x.type = "text",
+                y.style.display="none";
+                z.style.display="block";
+            }
+        }
+    </script>
+    <script src="script2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

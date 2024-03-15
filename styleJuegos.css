@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /*background-image: url(img/fondo.png);*/
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+
+/* Estilos para el menú de juegos */
+.menu-juegos {
+    margin-top: 140px; /* Agrega margen superior para evitar que los juegos se superpongan con la barra de navegación */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.juego {
+    margin: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.juego:hover {
+    transform: translateY(-5px);
+}
+
+.juego img {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.info-juego {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button.info {
+    background-color: #3498db;
+    color: white;
+}
+
+button.info:hover {
+    background-color: #2980b9;
+}
+
+button.jugar {
+    background-color: #27ae60;
+    color: white;
+}
+
+button.jugar:hover {
+    background-color: #219653;
+}
+
+/* Estilos para el modal - informaion del juego*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Alinear elementos en los extremos */
+    align-items: center; /* Centrar verticalmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657); /* Color de fondo de la barra de navegación */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    padding: 10px 20px; /* Espaciado interno */
+}
+.navbar-left {
+    display: flex; /* Utilizar flexbox para alinear elementos */
+    align-items: center; /* Centrar verticalmente */
+}
+.navbar-right {
+    margin-left: auto; /* Empujar los elementos hacia la derecha */
+}
+.navbar-left img {
+    width: 90px; /* Ancho del logo */
+    height: 90px; /* Altura automática para mantener la proporción */
+    margin-right: 20px; /* Espacio a la derecha del logo */
+}
+.navbar-right .btn-salir {
+    padding: 8px 16px;
+    border: none;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.navbar-right .btn-salir:hover {
+    background-color: #d32f2f;
+}
+
+/*filtrado por grado academico*/
+.filtro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
+    border-bottom: 3px solid #ccc;
+    position: fixed;
+    top: 110px; /* Ajusta esta medida para alinearla debajo de tu barra de navegación */
+    left: 0;
+    right: 0;
+}
+
+.filtro label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+.filtro select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+}

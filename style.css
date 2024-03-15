@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: cursive;
+}
+body{
+    /*background-image: url(img/fondo.png);*/
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: brown;
+}
+
+header{
+    /*background-image: url(img/fondo.png);*/
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
+}
+.menu .logo {
+    font-weight: 700;
+    font-size: 30px;
+    color:beige;/*color del texto*/
+}
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+.menu .navbar ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #024BCC;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+.menu .navbar ul li:hover::after {
+    transform: scaleX(1);
+}
+
+.menu .navbar ul li a{
+    font-size: 25px;/*Tamaño del texto*/
+    padding: 20px;
+    color: beige;
+    display: block;
+    transition: color 0.3s;
+}
+/*color que se pone cuando pasa el mouse*/
+.menu .navbar ul li a:hover{
+    color:#024BCC;
+}
+#menu{
+    display: none;
+}
+.menu-icono{
+    width: 25px;
+}
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+
+.header-content {
+    display: flex;
+
+}
+.content {
+    padding: 150px 150px 0px 0px;
+}
+.content h1{
+    color: beige; /* Cambia el color del texto */
+    font-size: 90px; /* Cambia el tamaño del texto */
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 55px;
+}
+.content p{
+    margin-top: 25px;
+    color: beige; /* Cambia el color del texto */
+    font-size: 28px; /* Cambia el tamaño del texto */
+    text-transform: uppercase;
+    line-height: 40px;
+}
+.btn-1{
+    display: inline-block;
+    background-color: rgba(170, 177, 255, 0.3);
+    border: 1px solid beige;
+    margin: 35px 10px 0px 0px;
+    padding: 15px 25px;
+    color: beige;
+    border-radius: 25px;
+}
+.btn-1:hover{
+    background-color: mediumpurple;
+}
+
+
+.about {
+    padding: 80px 0px;
+    text-align: center;
+    color: beige;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 40px; /* Cambia el tamaño del texto */
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 24px; /* Cambia el tamaño del texto */
+    line-height: 1.6;
+}
+
+
+.services {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+/*caja de los servicios*/
+.service {
+    padding: 25px;
+    margin: 0px 10px;
+    box-shadow: 0px 0px 20px rgba(135, 141, 214, 0.3);
+}
+.service img{
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+.service h3{
+    font-size: 30px;
+    color: beige;
+    margin-bottom: 10px;
+}
+.service p{
+    color: beige;
+    font-size: 24px;
+}
+.service:hover {
+    box-shadow: 0px 0px 30px rgba(135, 141, 214, 0.6);
+    transform: translateY(-5px);
+}
+
+
+.porfolios {
+    padding: 80px 0px;
+    text-align: center;
+    color: beige;
+}
+.porfolios h2{
+    font-size: 60px; /* Cambia el tamaño del texto */
+    margin-bottom: 30px;
+}
+.porfolio{
+    flex: 1;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(135, 141, 214, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+}
+.porfolio img{
+    width: 300px;/*aumentar tamaño de la img*/
+    max-width: 100%;
+    margin-right: 40px;
+    display: block;
+    margin: 0 auto;
+} 
+.porfolio-1, .porfolio-2{
+    text-align: left;
+    margin-left: 100px;
+    max-width: 550px; /* Aumenta el ancho máximo del texto */
+}
+.porfolio-1 h3, .porfolio-2 h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.porfolio-1 p, .porfolio-2 p{
+    font-size: 22px; /* Cambia el tamaño del texto */
+    color: black;
+    margin-bottom: 25px;
+    line-height: 1.5;/* Ajusta el espacio entre líneas del texto */
+}
+
+.btn-2{
+    display: inline-block;
+    background-color: rgba(170, 177, 255, 0.3);
+    border: 1px solid beige;
+    margin: 35px 10px 0px 0px;
+    padding: 15px 25px;
+    color: beige;
+    border-radius: 25px;
+    text-decoration: none;
+}
+.btn-2:hover{
+    background-color: mediumpurple;
+}
+.porfolio:hover {
+    box-shadow: 0px 0px 30px rgba(135, 141, 214, 0.6);
+    transform: translateY(-5px);
+}
+
+
+footer{
+    padding: 200px 0px 30px 0px;
+    /*background-image: url(img/fondo.png);*/
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.info-content{
+    display: flex;
+}
+.info-price{
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(135, 141, 214, 0.3);
+    margin: 0px 150px 0px 0px;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-price h2{
+    font-size: 30px; /* Cambia el tamaño del texto */
+    margin-bottom: 10px;
+}
+.price{
+    font-size: 18px;
+    color: bisque !important;
+    margin-bottom: 10px;
+}
+.info-price p{
+    font-size: 25px; /* Cambia el tamaño del texto */
+    color: beige;
+}
+.info-price:hover {
+    box-shadow: 0px 0px 30px rgba(135, 141, 214, 0.6);
+    transform: translateY(-5px);
+}
+.info-txt{
+    margin-left: 3px;
+    color: black;
+    font-size: 20px; 
+}
+
+hr{
+    margin: 45px 0px;
+    border: 0.5px solid beige;
+}
+
+.enlaces{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+.enlaces h3{
+    font-size: 25px;
+}
+.enlace{
+    display: flex;
+}
+.enlace li a{
+    display: block;
+    margin: 20px;
+    color: black;
+}
+.enlace li a:hover{
+    color: aqua;
+}

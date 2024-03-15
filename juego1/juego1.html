@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego1</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Arrastra la figura donde corresponde</h1>    
+    <div class="container">
+        <!--ondragstart: especifico que debe suceder cuando se arrstra un elemento
+    draggable: indica que el elemento se puede arrastrar-->
+    <img src="../img/rectangulo.png" alt="" draggable="true" ondragstart="drag(event)" id="rectangulo">
+    <img src="../img/cuadrado.png" alt="" draggable="true" ondragstart="drag(event)" id="cuadrado">
+    <img src="../img/triangulo.png" alt="" draggable="true" ondragstart="drag(event)" id="triangulo">
+    <img src="../img/ovalo.png" alt="" draggable="true" ondragstart="drag(event)" id="ovalo">
+    <img src="../img/rombo.png" alt="" draggable="true" ondragstart="drag(event)" id="rombo">
+    <img src="../img/circulo.png" alt="" draggable="true" ondragstart="drag(event)" id="circulo">
+    </div>
+    <div class="container">
+        <div class="figura">
+            <!--ondrop: especifico que sucede cuando se suelta un elemento arrastrado
+            ondragover: especifico donde se pueden soltar los datos o elementos arrastrados-->
+            <div class="box" id="0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Cuadrado</h2>
+        </div>
+        <div class="figura">
+            <!--ondrop: especifico que sucede cuando se suelta un elemento arrastrado
+            ondragover: especifico donde se pueden soltar los datos o elementos arrastrados-->
+            <div class="box" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Triangulo</h2>
+        </div>
+        <div class="figura">
+            <!--ondrop: especifico que sucede cuando se suelta un elemento arrastrado
+            ondragover: especifico donde se pueden soltar los datos o elementos arrastrados-->
+            <div class="box" id="2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Circulo</h2>
+        </div>
+        <div class="figura">
+            <!--ondrop: especifico que sucede cuando se suelta un elemento arrastrado
+            ondragover: especifico donde se pueden soltar los datos o elementos arrastrados-->
+            <div class="box" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Rectangulo</h2>
+        </div>
+        <div class="figura">
+            <!--ondrop: especifico que sucede cuando se suelta un elemento arrastrado
+            ondragover: especifico donde se pueden soltar los datos o elementos arrastrados-->
+            <div class="box" id="4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Rombo</h2>
+        </div>
+        <div class="figura">
+            <!--ondrop: especifico que sucede cuando se suelta un elemento arrastrado
+            ondragover: especifico donde se pueden soltar los datos o elementos arrastrados-->
+            <div class="box" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Ovalo</h2>
+        </div>
+    </div>
+    <div id="resultados" style="display: none;">
+        <h2>Resultados:</h2>
+        <p id="correctos">Elementos correctos: 0</p>
+        <p id="incorrectos">Elementos incorrectos: 0</p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

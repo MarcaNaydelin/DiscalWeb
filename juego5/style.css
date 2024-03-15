@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #024BCC, #5021Ad, #D05471, #DAA657);
+}
+
+.main-container{ /*el canvas aparece al centro de la pantalla*/
+    /*background-color: rgb(113, 128, 212);*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas{
+    background-color: white;
+}

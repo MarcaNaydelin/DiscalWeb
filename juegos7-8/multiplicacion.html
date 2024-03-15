@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Multiplicaciones</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Juego de Multiplicaciones</h1>
+    <div class="container">
+        <div class="izquierda">
+            <div class="container-operacion">
+                <span id="multiplicacion">7 x 8</span>
+                <span class="resultado" id="resultado">?</span>
+            </div>
+            <span class="msj" id="msj">EXCELENTE!!</span>
+        </div>
+        <div class="derecha">
+            <!-- Opciones de selección múltiple para multiplicaciones -->
+            <span id="op1" class="opcion" onclick="controlarRespuestaMultiplicacion(this)">54</span>
+            <span id="op2" class="opcion" onclick="controlarRespuestaMultiplicacion(this)">56</span>
+            <span id="op3" class="opcion" onclick="controlarRespuestaMultiplicacion(this)">57</span>
+        </div>
+    </div>
+</body>
+<script src="./scriptMul.js"></script>
+</html>

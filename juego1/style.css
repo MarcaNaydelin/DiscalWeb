@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap');
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background-image: url(../img/fondo.png);*/
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilos para las imágenes arrastrables */
+.container img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para las cajas donde se pueden soltar los elementos */
+.figura {
+    text-align: center;
+    margin: 20px;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para los textos de las cajas */
+.box h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Estilos para el mensaje del resultado */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+}
+

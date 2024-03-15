@@ -1,0 +1,29 @@
+/* Estilos para el panel de navegación */
+.nav {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav ul li {
+    margin-bottom: 10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para el contenido */
+.container {
+    margin-left: 250px; /* Ancho del panel de navegación */
+    padding: 20px;
+}

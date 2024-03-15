@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú de Juegos Educativos</title>
+    <link rel="stylesheet" href="styleJuegos.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="perfilUsuario.html"><img src="img/logo.png" alt="Logo del proyecto"></a>
+        </div>
+        <div class="navbar-right">
+            <a href="index.html" class="btn-salir">Volver</a>
+        </div>
+    </nav>
+    <div class="filtro">
+        <label for="grado">Filtrar por grado académico:</label>
+        <select id="grado">
+            <option value="todos">Todos</option>
+            <option value="primero">Primero</option>
+            <option value="segundo">Segundo</option>
+            <option value="tercero">Tercero</option>
+            <option value="tercero">Cuarto</option>
+            <option value="tercero">Quinto</option>
+            <option value="tercero">Sexto</option>
+        </select>
+    </div>
+    <div class="menu-juegos">
+        <div class="juego">
+            <img src="img/figuras.png" alt="Juego 1">
+            <div class="info-juego">
+                <h3>Identifica las figuras</h3>
+                <button class="info">Información</button>
+                <button class="jugar"><a href="./juego1/juego1.html">Jugar</a>
+                </button>
+            </div>
+        </div>
+        <div class="juego">
+            <img src="img/sumresmuldiv.png" alt="Juego 2">
+            <div class="info-juego">
+                <h3>Operaciones rapidas</h3>
+                <button class="info">Información</button>
+                <button class="jugar"><a href="./juego2/juego2.html">Jugar</a>
+                </button>
+            </div>
+        </div>
+        <div class="juego">
+            <img src="img/mateRapidas.png" alt="Juego 3">
+            <div class="info-juego">
+                <h3>Matematicas rapidas</h3>
+                <button class="info">Información</button>
+                <button class="jugar" onclick="window.location.href = 'https://poolextremo.itch.io/juegos';">Jugar</button>
+            </div>
+        </div>
+        <div class="juego">
+            <img src="img/division.png" alt="Juego 4">
+            <div class="info-juego">
+                <h3>Divisiones divertidas</h3>
+                <button class="info">Información</button>
+                <button class="jugar"><a href="./juegos7-8/division.html">Jugar</a>
+                </button>
+            </div>
+        </div>
+        <div class="juego">
+            <img src="img/mate.png" alt="Juego 1">
+            <div class="info-juego">
+                <h3>Problemas Matemáticos</h3>
+                <button class="info">Información</button>
+                <button class="jugar"><a href="./juego5/juego5.html">Jugar</a>
+                </button>
+            </div>
+        </div>
+        <div class="juego">
+            <img src="img/sumas2.png" alt="Juego 1">
+            <div class="info-juego">
+                <h3>Sumas Divertidas</h3>
+                <button class="info">Información</button>
+                <button class="jugar"><a href="./juego3/juego3.html">Jugar</a>
+                </button>
+            </div>
+        </div>
+        <div class="juego">
+            <img src="img/restas.png" alt="Juego 1">
+            <div class="info-juego">
+                <h3>Restas Divertidas</h3>
+                <button class="info">Información</button>
+                <button class="jugar"><a href="./juegos7-8/restas.html">Jugar</a>
+                </button>
+            </div>
+        </div>
+        <div class="juego">
+            <img src="img/multiplicacion.png" alt="Juego 1">
+            <div class="info-juego">
+                <h3>Multiplicaciones Divertidas</h3>
+                <button class="info">Información</button>
+                <button class="jugar"><a href="./juegos7-8/multiplicacion.html">Jugar</a>
+                </button>
+            </div>
+        </div>
+        <!-- Agrega más juegos aquí -->
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Información del Juego</h2>
+            <p>Este juego es una aventura matemática que te lleva a resolver problemas...</p>
+            <p>Logros: Has completado el nivel 1 y ganado la medalla de oro.</p>
+        </div>
+    </div>
+
+    <script src="scriptJuegos.js"></script>
+</body>
+</html>
