@@ -49,4 +49,21 @@ function drop(ev) {
         document.getElementById('incorrectos').textContent = `Elementos incorrectos: ${elementosIncorrectos}`;
     }
 }
+function shuffleFiguras() {
+    const contenedor = document.querySelector('.container');
+    for (let i = contenedor.children.length; i >= 0; i--) {
+        contenedor.appendChild(contenedor.children[Math.random() * i | 0]);
+    }
+}
+shuffleFiguras(); // Llamamos a esta función para barajar las figuras al cargar el juego.
+
+function reiniciarJuego() {
+    // Reiniciar el arreglo y el contador de resultados
+    arreglo = ["", "", "" ,"" ,"" ,""];
+    document.getElementById('resultados').style.display = 'none';
+
+    // Barajar las figuras nuevamente
+    shuffleFiguras();
+}
+
 

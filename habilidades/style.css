@@ -13,13 +13,13 @@
     width: 500px;
     height: auto;
     margin: 2rem auto;
-    background-color: rgb(32, 29, 29);
-    height: 290px;
+    background-color: rgb(241, 239, 239);
+    height: 320px;
     border-radius: 100px 30px;
     transition: all 0.3s ease-out;
     box-shadow: 10px 10px 10px 3px slategrey;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 .skills:hover{
     background-color: rgb(226, 226, 226);

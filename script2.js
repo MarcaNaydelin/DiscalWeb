@@ -136,9 +136,7 @@ btn_adelante4.addEventListener("click", function(e) {
             Swal.showLoading();
         }
     }).then(() => {
-        // Redirigir o realizar alguna acción después de que se muestre el mensaje de éxito
-        // Por ejemplo:
-        // window.location.href = "nueva-pagina.html";
+        
     });
 });
 

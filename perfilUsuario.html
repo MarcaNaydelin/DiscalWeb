@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Perfil de Usuario</title>
     <link rel="stylesheet" href="stylePerfil.css">
+    <link rel="stylesheet" href="./habilidades/style.css">
 </head>
 <body>
     <nav class="navbar">
@@ -26,7 +27,44 @@
             <!-- Otros detalles del perfil del usuario -->
         </div>
     </div>
+
+    <section class="skills">
+        <h2>Habilidades</h2>
+        <div class="container-bars">
+            <div class="bar-space">
+                <p>Logica</p>
+                <div class="bar">
+                    <div id="react" class="progress"></div>
+                </div>
+                <p>75%</p>
+            </div>
+            <div class="bar-space">
+                <p>Analisis</p>
+                <div class="bar">
+                    <div id="HTML5" class="progress"></div>
+                </div>
+                <p>65%</p>
+            </div>
+            <div class="bar-space">
+                <p>Comprencion</p>
+                <div class="bar">
+                    <div id="CSS3" class="progress"></div>
+                </div>
+                <p>55%</p>
+            </div>
+            <div class="bar-space">
+                <! --<img src="../img/rombo.png" alt="JS"/>
+                <p>Enfoque</p>
+                <div class="bar">
+                    <div id="js" class="progress"></div>
+                </div>
+                <p>80%</p>
+            </div>
+        </div>
+    </section>
+
     <script src="perfilUsuario.js"></script>
+    <script src="./habilidades/script.js"></script>
     <button class="button" onclick="window.location.href = 'menu_juegos.html';">Ir al Menú de Juegos</button>
 </body>
 </html>
