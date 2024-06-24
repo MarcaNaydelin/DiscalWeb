@@ -34,9 +34,16 @@
             <input type="text" id="respuesta_usuario">
             <button id="corregir" onclick="corregir()">Corregir</button>
         </section>
-        <section id="msj_correcion">
-        </section>
+        <section id="msj_correcion"></section>
     </div>
+    <div id="feedback" class="feedback-container" style="display: none;">
+        <h2>¡Juego Terminado!</h2>
+        <p id="correctas"></p>
+        <p id="incorrectas"></p>
+        <p id="puntaje"></p>
+        <p id="mensajeMotivador"></p>
+        <a id="volver" href="../menu_juegos.html">Volver al Menú de Juegos</a>
+    </div>
+    <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 </html>

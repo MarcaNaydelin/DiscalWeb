@@ -1,0 +1,209 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /*background-image: url(img/fondo.png);*/
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+
+/*logo*/
+.logo {
+    position: fixed;
+    top: 2px; /* Ajusta la distancia desde la parte superior */
+    left: 80px; /* Ajusta la distancia desde la izquierda */
+    z-index: 1000;
+}
+.logo img {
+    width: 80px;
+    height: 80px;
+    /* Otros estilos para el tamaño, márgenes, bordes, etc., si es necesario */
+}
+
+.container {
+    width: 400px;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 50%;
+}
+
+.paso p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.paso .num {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    font-weight: 600;
+}
+
+.paso .check {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    color: #31d792;
+}
+
+.paso.active .num {
+    border-color: #31d792;
+}
+
+.paso.active.complete .num {
+    background: #31d792;
+    color: white;
+}
+
+.paso.active.complete .check {
+    display: block;
+}
+
+.form-princ .pagina {
+    display: none;
+}
+
+.form-princ .pagina.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.titulo {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #6665ee;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    border-color: #6665ee;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.adelante, button.volver, #btnfinalizar {
+    background: #6665ee;
+    color: #fff;
+}
+
+button.adelante:hover, button.volver:hover, #btnfinalizar:hover {
+    background: #4645dd;
+}
+
+button.adelante:active, button.volver:active, #btnfinalizar:active {
+    transform: scale(0.98);
+}
+
+#btn-cancelar {
+    background: #FF6347;
+    color: #fff;
+}
+
+#btn-cancelar:hover {
+    background: #FF4500;
+}
+
+#btn-cancelar:active {
+    transform: scale(0.98);
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-cancelar-container {
+    margin-top: 20px;
+}
+
+.avatar-selector {
+    display: flex;
+    justify-content: space-between;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.avatar.selected {
+    border-color: #6665ee;
+}

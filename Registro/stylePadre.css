@@ -13,7 +13,6 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    /*background-image: url(img/fondo.png);*/
     background: linear-gradient(to bottom right, #5021AD, #D05471, #DAA657);
     background-size: cover;
     font-family: cursive;
@@ -157,16 +156,7 @@ body{
 }
 
 
-header{
-    /*background-image: url(img/fondo.png);*/
-    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-}
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -229,3 +219,22 @@ header{
     display: none;
 }
 
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.input-error {
+    border: 2px solid red;
+    animation: shake 0.2s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}

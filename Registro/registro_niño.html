@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro del niño</title>
+    <link rel="stylesheet" href="styleNiño.css"> 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap">
+</head>
+<body>
+    <div class="logo">
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="logo">
+        </a>
+    </div>
+    <div class="container">
+        <div class="progress-bar">
+            <div class="paso active"><p>Parte 1</p><div class="num">1</div><div class="check">&#10003;</div></div>
+            <div class="paso"><p>Parte 2</p><div class="num">2</div><div class="check">&#10003;</div></div>
+        </div>
+        <form id="registroNiñoForm" class="form-princ">
+            <div class="pagina active">
+                <div class="titulo">Información del Niño</div>
+                <div class="campo">
+                    <label for="avatar" class="label">Elige un Avatar:</label>
+                    <div class="avatar-selector">
+                        <img src="./Avatars/user1.jpeg" alt="Avatar 1" class="avatar" id="avatar1">
+                        <img src="./Avatars/user2.jpeg" alt="Avatar 2" class="avatar" id="avatar2">
+                        <img src="./Avatars/user3.jpeg" alt="Avatar 3" class="avatar" id="avatar3">
+                    </div>
+                </div>
+                <div class="campo">
+                    <label for="nombreNino" class="label">Nombre del Niño:</label>
+                    <input type="text" id="nombreNino" name="nombreNino">
+                    <span id="nombreNino-error" class="error"></span>
+                </div>
+                <div class="campo">
+                    <label for="gradoAcademico" class="label">Grado Académico:</label>
+                    <select id="gradoAcademico" name="gradoAcademico">
+                        <option value="-1">Selecciona el Grado</option>
+                        <option value="1">1ro de primaria</option>
+                        <option value="2">2do de primaria</option>
+                        <option value="3">3ro de primaria</option>
+                        <option value="4">4to de primaria</option>
+                        <option value="5">5to de primaria</option>
+                        <option value="6">6to de primaria</option>
+                    </select>
+                    <span id="gradoAcademico-error" class="error"></span>
+                </div>
+                <div class="campo">
+                    <label for="passwordNino" class="label">Contraseña:</label>
+                    <input type="password" id="passwordNino" name="passwordNino">
+                    <span id="passwordNino-error" class="error"></span>
+                </div>
+                <div class="campo">
+                    <button class="adelante">Siguiente</button>
+                </div>
+                <p class="redirect">¿Ya tienes una cuenta? <a href="./login_niño.html">Inicia Sesión</a></p>
+            </div>
+            <div class="pagina">
+                <div class="titulo">Información del Padre</div>
+                <div class="campo">
+                    <label for="nombrePadre" class="label">Nombre del Padre:</label>
+                    <input type="text" id="nombrePadre" name="nombrePadre">
+                    <span id="nombrePadre-error" class="error"></span>
+                </div>
+                <div class="campo">
+                    <label for="emailPadre" class="label">Email del Padre:</label>
+                    <input type="email" id="emailPadre" name="emailPadre">
+                    <span id="emailPadre-error" class="error"></span>
+                </div>
+                <div class="campo btns">
+                    <button class="volver">Volver</button>
+                    <button id="btnfinalizar">Finalizar</button>
+                </div>
+                <div class="campo btn-cancelar-container">
+                    <button id="btn-cancelar" class="btn-cancelar">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="scriptNiño.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

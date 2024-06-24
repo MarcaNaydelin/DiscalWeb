@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login del Niño</title>
+    <link rel="stylesheet" href="login-style.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login del Niño</h2>
+            <p class="redirect">¿No tienes una cuenta? <a href="./registro_niño.html">Registra al Niño</a></p>
+            <form id="loginForm">
+                <div class="campo">
+                    <label for="nombreNino">Nombre del Niño:</label>
+                    <input type="text" id="nombreNino" name="nombreNino">
+                    <span id="nombreNino-error" class="error"></span>
+                </div>
+                <div class="campo">
+                    <label for="passwordNino">Contraseña:</label>
+                    <input type="password" id="passwordNino" name="passwordNino">
+                    <span id="passwordNino-error" class="error"></span>
+                </div>
+                <div class="campo">
+                    <button type="submit" class="login-btn">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="login-script.js"></script>
+</body>
+</html>

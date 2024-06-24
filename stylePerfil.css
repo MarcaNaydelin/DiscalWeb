@@ -93,3 +93,48 @@ p {
     background-color: #d32f2f;
 }
 
+/* Estilos para los logros */
+.achievements {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.achievements h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.achievements-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.achievement img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.achievement img:hover {
+    transform: scale(1.1);
+}
+
+.achievement p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+}

@@ -1,25 +1,27 @@
+const gradoAcademicoMap = {
+    1: "1ro de primaria",
+    2: "2do de primaria",
+    3: "3ro de primaria",
+    4: "4to de primaria",
+    5: "5to de primaria",
+    6: "6to de primaria"
+};
+
 document.addEventListener("DOMContentLoaded", function() {
-    // Recuperar datos del localStorage
-    const nombreUsuario = localStorage.getItem('nombreUsuario');
-    const edad = localStorage.getItem('edad');
-    let genero = localStorage.getItem('genero');
+    const nombreNiño = localStorage.getItem('nombreNino');
+    const gradoAcademico = localStorage.getItem('gradoAcademico');
+    const nombrePadre = localStorage.getItem('nombrePadre');
+    const emailPadre = localStorage.getItem('emailPadre'); // Añadir la obtención del email del padre
+    const avatarSeleccionado = localStorage.getItem('avatarSeleccionado');
 
-    // Convertir el valor numérico a texto legible
-    if (genero === '0') {
-        genero = 'Masculino';
-    } else if (genero === '1') {
-        genero = 'Femenino';
-    } else {
-        genero = 'No especificado'; // Puedes añadir un caso para otros valores
-    }
-
-    // Mostrar los datos en el perfil del usuario
     const nombreElement = document.getElementById('nombreUsuario');
-    const edadElement = document.getElementById('edadUsuario');
-    const generoElement = document.getElementById('generoUsuario');
+    const gradoElement = document.getElementById('edadUsuario');
+    const nombrePadreElement = document.getElementById('generoUsuario');
+    const emailPadreElement = document.getElementById('emailUsuario'); // Añadir el elemento para mostrar el email del padre
+    const avatarElement = document.getElementById('avatarUsuario');
 
-    nombreElement.textContent = nombreUsuario;
-    edadElement.textContent = `${edad} años`;
-    generoElement.textContent = genero;
+    nombreElement.textContent = nombreNiño;
+    gradoElement.textContent = gradoAcademicoMap[gradoAcademico];
+    nombrePadreElement.textContent = nombrePadre;
+    avatarElement.src = avatarSeleccionado;
 });
-

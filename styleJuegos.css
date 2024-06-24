@@ -7,10 +7,10 @@
 
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    /*background-image: url(img/fondo.png);*/
     background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
     background-position: center;
     background-size: cover;
@@ -20,7 +20,7 @@ body {
 
 /* Estilos para el menú de juegos */
 .menu-juegos {
-    margin-top: 140px; /* Agrega margen superior para evitar que los juegos se superpongan con la barra de navegación */
+    margin-top: 20px; /* Asegura que haya espacio entre el mensaje y los juegos */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -31,20 +31,26 @@ body {
     margin: 20px;
     text-align: center;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .juego:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .juego img {
-    width: 200px;
+    width: 100%;
     height: 150px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 15px 15px 0 0;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.juego:hover img {
+    transform: scale(1.05);
 }
 
 .info-juego {
@@ -81,7 +87,7 @@ button.jugar:hover {
     background-color: #219653;
 }
 
-/* Estilos para el modal - informaion del juego*/
+/* Estilos para el modal - información del juego */
 .modal {
     display: none;
     position: fixed;
@@ -126,29 +132,33 @@ button.jugar:hover {
 /* Estilos para la barra de navegación */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Alinear elementos en los extremos */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657); /* Color de fondo de la barra de navegación */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
-    padding: 10px 20px; /* Espaciado interno */
+    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 20px;
 }
+
 .navbar-left {
-    display: flex; /* Utilizar flexbox para alinear elementos */
-    align-items: center; /* Centrar verticalmente */
+    display: flex;
+    align-items: center;
 }
+
 .navbar-right {
-    margin-left: auto; /* Empujar los elementos hacia la derecha */
+    margin-left: auto;
 }
+
 .navbar-left img {
-    width: 90px; /* Ancho del logo */
-    height: 90px; /* Altura automática para mantener la proporción */
-    margin-right: 20px; /* Espacio a la derecha del logo */
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
 }
+
 .navbar-right .btn-salir {
     padding: 8px 16px;
     border: none;
@@ -158,32 +168,26 @@ button.jugar:hover {
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
+
 .navbar-right .btn-salir:hover {
     background-color: #d32f2f;
 }
 
-/*filtrado por grado academico*/
-.filtro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: linear-gradient(to right, #5021Ad, #D05471, #DAA657);
-    border-bottom: 3px solid #ccc;
-    position: fixed;
-    top: 110px; /* Ajusta esta medida para alinearla debajo de tu barra de navegación */
-    left: 0;
-    right: 0;
+.motivational-message {
+    margin-top: 140px; /* Asegura que el mensaje no se superponga con la barra de navegación */
+    padding: 20px;
+    background-color: #ffffff99;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    font-size: 1.5em;
+    max-width: 800px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.filtro label {
-    margin-right: 10px;
-    font-weight: bold;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
-.filtro select {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    font-size: 14px;
-}
+

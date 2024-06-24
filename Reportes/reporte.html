@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Avances</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Informe de Avances del Niño</h1>
+        <section class="report-summary">
+            <p>Hora de Ingreso: <span id="horaIngreso"></span></p>
+            <p>Juegos Completados: <span id="juegosCompletados"></span></p>
+        </section>
+        <section class="chart-container">
+            <canvas id="habilidadesChart"></canvas>
+        </section>
+        <section class="game-results">
+            <h2>Resultados por Juego</h2>
+            <table id="resultadosTable">
+                <thead>
+                    <tr>
+                        <th>Juego</th>
+                        <th>Correctas</th>
+                        <th>Incorrectas</th>
+                        <th>Porcentaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de resultados se generarán dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+        <a id="volver" href="index.html"></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
